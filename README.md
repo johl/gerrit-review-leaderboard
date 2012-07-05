@@ -23,5 +23,5 @@ You may now run the application
 Note that --host and --project are required arguments. For reverse
 sorting try this:
 
-   ./gerrit-review-leaderboard.rb list --host=review --project=path/to/my/project --reverse
+    ./gerrit-review-leaderboard.rb list --host=review --project=path/to/my/project --reverse
     
