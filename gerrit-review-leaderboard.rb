@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'json'
-require "thor"
+require 'thor'
 
 class GerritReviewLeaderboard < Thor
   map "-L" => :list
