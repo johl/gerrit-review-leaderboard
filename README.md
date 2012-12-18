@@ -25,3 +25,5 @@ sorting try this:
 
     ./gerrit-review-leaderboard.rb list --host=review --project=path/to/my/project --reverse
     
+--port is optional. (default: 29418)
+

@@ -8,12 +8,14 @@ class GerritReviewLeaderboard < Thor
   desc "list", "Prints leaderboard"
   method_options :project => :string, :project => :required
   method_options :host => :string, :host => :required
+  method_options :port => 29418
   method_options :reverse => false
   def list
     project = options[:project]
     host = options[:host]
+    port = options[:port]
     reverse = options[:reverse]
-    api_cmd = "ssh -p 29418 #{host} gerrit query --format=JSON project:#{project} --current-patch-set --all-approvals --patch-sets"
+    api_cmd = "ssh -p #{port} #{host} gerrit query --format=JSON project:#{project} --current-patch-set --all-approvals --patch-sets"
     objects = `#{api_cmd}`
     reviewers = Hash.new
     objects.split("\n").each do |object|
